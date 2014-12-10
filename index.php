@@ -17,14 +17,14 @@ $groupManager->delRight('right_one');
 
 /* Get Right sql */
 $groupManager->setUserRightLvl('test');
-echo $groupManager->getUserRightLvl('test');
+echo '<b>Sql level right :</b> <i>'.$groupManager->getUserRightLvl('test').'</i><br />';
 
 /* Simple set Rights Lvl with sql get Right Lvl */
 $groupManager->setRightLvl($groupManager->getUserRightLvl('test'));
 
 /* Simple class get Rights */
 echo '<b>Level right :</b> <i>'.$groupManager->getRightLvl().'</i><br />';
-echo "<br /><b>right :</b><br />";
+echo '<br /><b>right :</b><br />';
 foreach ($groupManager->getAllRight() as $value) {
-    echo '- '.$value."<br />";
+    echo '- '.$value.'<br />';
 }

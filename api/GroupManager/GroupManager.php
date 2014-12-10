@@ -12,10 +12,10 @@ class GroupManager {
     private $_right;
     private $_sql;
     
-    public function __construct($bd, $user, $password) {
+    public function __construct($db_add, $bd, $user, $password) {
         spl_autoload_register(__NAMESPACE__.'\\GroupManager::loader');
         $this->_right = new classes\Rights();
-        $this->_sql = new classes\Sql($bd, $user, $password);
+        $this->_sql = new classes\Sql($db_add, $bd, $user, $password);
     }
     
     public function loader($classe) {
